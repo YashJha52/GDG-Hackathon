@@ -1,0 +1,61 @@
+/* (Keep all previous styles) */
+/* Add these new styles for the login and dynamic task content */
+
+.hidden { display: none !important; }
+
+#login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.login-card input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.login-card button { margin-top: 10px; }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#welcome-header { text-align: left; margin: 0; }
+#logout-button { background-color: #f44336; }
+#logout-button:hover { background-color: #d32f2f; }
+
+.task-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 15px auto;
+    display: block;
+    border: 1px solid #ddd;
+}

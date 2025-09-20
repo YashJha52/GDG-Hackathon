@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerQuest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Login Screen (Visible by default) -->
+    <div id="login-overlay">
+        <div class="login-card">
+            <h1>Welcome to CareerQuest 🚀</h1>
+            <p>Tell us a little about yourself to get started.</p>
+            <input type="text" id="name-input" placeholder="What's your name?">
+            <input type="number" id="grade-input" min="1" max="12" placeholder="What grade are you in?">
+            <button id="login-button">Start My Quest</button>
+        </div>
+    </div>
+
+    <!-- Main App Content (Hidden by default) -->
+    <div id="main-app" class="container hidden">
+        <div class="header">
+            <h1 id="welcome-header">Welcome!</h1>
+            <button id="logout-button">Log Out</button>
+        </div>
+
+        <div id="task-container">
+            <!-- Tasks will be dynamically loaded here -->
+            <div class="task-card" id="task1"></div>
+            <div class="task-card" id="task2"></div>
+            <div class="task-card" id="task3"></div>
+        </div>
+
+        <div id="results-container" class="hidden">
+            <h2>✨ Your Analysis is Ready!</h2>
+            <div id="results-content"></div>
+        </div>
+        
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
